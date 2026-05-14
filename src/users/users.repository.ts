@@ -1,5 +1,5 @@
-import { DbService } from "@/database";
 import { Injectable } from "@nestjs/common";
+import { DbService } from "../database";
 import { IControlLoginOutputRow } from "./users.types";
 
 @Injectable()

@@ -4,8 +4,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import { AuthService } from './auth.service';
 import { AuthGuard, BearerAuthGuard, CookieAuthGuard } from './guard';
-import { UsersModule } from '@/users';
-import { DbModule } from '@/database';
+import { UsersModule } from '../users';
+import { DbModule } from '../database';
 
 @Module({
   imports: [
