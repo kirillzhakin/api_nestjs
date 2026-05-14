@@ -9,4 +9,8 @@ export class ServerController {
     getGeneralSettings() {
         return this.service.getGeneralSettingsFromDB();
     }
+    @Get('testSettigs')
+    testSettigs() {
+        return 'TEST SETTINGS';
+    }
 }
