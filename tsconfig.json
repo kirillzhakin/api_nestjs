@@ -1,0 +1,113 @@
+{
+  "compilerOptions": {
+    /**
+     * 📦 Система модулей
+     * commonjs = стабильный стандарт для NestJS backend
+     */
+    "module": "commonjs",
+
+    /**
+     * 🔍 Как TypeScript ищет модули
+     * node = классический Node.js resolver
+     */
+    "moduleResolution": "node",
+
+    /**
+     * ⚡ Версия JavaScript на выходе
+     * ES2023 -> Node.js 20+
+     */
+    "target": "ES2023",
+
+    /**
+     * 📄 Генерировать .d.ts файлы
+     * Полезно для библиотек и типизации
+     */
+    "declaration": true,
+
+    /**
+     * 🗺 Source maps
+     * Нужны для дебага TS в runtime
+     */
+    "sourceMap": true,
+
+    /**
+     * 📁 Куда складывать build
+     */
+    "outDir": "./dist",
+
+    /**
+     * 📍 Базовая директория для импортов
+     */
+    "baseUrl": "./",
+
+    /**
+     * 🚀 Alias импортов
+     * Вместо ../../../users
+     * можно:
+     * import x from '@/users'
+     */
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+
+    /**
+     * 🧩 Включить decorators
+     * Обязательно для NestJS
+     */
+    "experimentalDecorators": true,
+
+    /**
+     * 🧠 Metadata для decorators
+     * Нужен DI контейнеру NestJS
+     */
+    "emitDecoratorMetadata": true,
+
+    /**
+     * 🤝 Разрешить default imports
+     * Удобно для многих npm библиотек
+     */
+    "allowSyntheticDefaultImports": true,
+
+    /**
+     * 🔄 Совместимость CommonJS/ESM
+     * Спасает от import проблем
+     */
+    "esModuleInterop": true,
+
+    /**
+     * ⚡ Incremental build cache
+     * Ускоряет компиляцию
+     */
+    "incremental": true,
+
+    /**
+     * 🧹 Удалять комментарии в build
+     */
+    "removeComments": true,
+
+    /**
+     * 🚫 Не проверять типы node_modules
+     * Сильно ускоряет TS
+     */
+    "skipLibCheck": true,
+
+    /**
+     * 🔒 Главный strict mode
+     * Максимальная типобезопасность
+     */
+    "strict": true,
+
+    /**
+     * 📁 Проверка регистра файлов
+     * Защищает Linux deploy
+     */
+    "forceConsistentCasingInFileNames": true,
+
+    /**
+     * 🚨 Запрет fallthrough в switch
+     */
+    "noFallthroughCasesInSwitch": true
+  }
+}
