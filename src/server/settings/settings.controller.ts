@@ -9,7 +9,7 @@ export class ServerController {
     getGeneralSettings() {
         return this.service.getGeneralSettingsFromDB();
     }
-    @Get('testSettigs')
+    @Get('testSettings')
     testSettigs() {
         return 'TEST SETTINGS';
     }

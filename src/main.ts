@@ -29,7 +29,12 @@ async function bootstrap() {
 		origin: config.getOrThrow<string>('ALLOWED_ORIGIN').split(','),
 		credentials: true,
 	})
-	await app.listen(config.getOrThrow<number>('PORT') ?? 4000)
+
+	const port = config.getOrThrow<number>('PORT') ?? 4000
+
+	await app.listen(port, '0.0.0.0');
+
+	console.log(`Server started on port = ${port}`);
 }
 bootstrap()
 
